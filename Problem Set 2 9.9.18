@@ -2,22 +2,24 @@ Problem Set #2
 Marissa Kelley
 Due Sunday September 9th
 
+//I bounced ideas off with Jacob Paul, Anastasia Zhukova, Amy (Kexin) Zhai, Jack Sandberg, Hannah Weber and Taylor Lawrence during Friday's class
+
 1. Briefly describe what the following set of commands would achieve. What process would happen and what would be printed to the command line?
 
     A. cd ~ 
-The cd ~ s
+The cd ~ command would ______
 
 B. mkdir ./problem_set_1
-
+This command says to make a new directory in the ____ which is the ./ portion. The 
 
 C. touch submission.txt
 
 
 D. cd ..
-The cd takes you to the parent of the parent directory 
+The cd takes you to the parent of the parent directory. 
 
 E. pwd
-The pwd stands for "print working directory" which displays what current directory you're working in. This is beneficial in that 
+The pwd stands for "print working directory" which displays what current directory you're working in. This is beneficial if you need to find where you are, want to move a file to a different part of the computer or copy a file to a different part. It's extremely important!!! 
 
 2. What set of commands would you use to achieve the following: 
 Copy a document called config.txt from your home directory to the root directory. Then, create a new directory in the root called preferences. Within preferences, copy prefs.txt from a matching directory called preferences in your home directory. Finally, determine that the start and end of the config.txt document in both root and home match.
@@ -27,7 +29,7 @@ mkdir preferences
 cp prefs.txt 
 
 3. Why do you think it is important to have the following shortcuts for navigating the file structure?
-A. Root: 
+A. Root: easier to get back to the beginning 
 B. Home: 
 C. Parent: 
 
@@ -36,8 +38,47 @@ C. Parent:
 cd /usrs/INFO3401/../homework/./problem1
 pwd
 
-The above would print out the working directory: _______ 
+The above would print out the working directory: it would go back up to the parent usrs because of the two dots and then into 
+reference /homework/problem1 
+.. back up to users
+It would eventually print out 
+usrs 
+it goes usrs to info3401 back up to usrs over homework to problem 1 
 
 5. You have accidentally moved a file (~/Documents/datafile.csv) to your current directory rather than copying it. What command did you use to do that? What command should you have used to do that? What command might you use to undo it? 
 
-To accidentally have moved a file, you would have had to use the ____ command. The command you should have used to copy a file is "cp". To undo it, you are screwed basically. There's no going back lol 
+To accidentally have moved a file, you would have had to use the "mv ." command to move it to your current directory. The command you should have used to copy a file is "cp .". To undo it, you could re-copy it OR move it back to the ~/Documents
+cp ./datafile.csv ~Documents/datafile.csv
+Pro-tip You could also sing Carrie Underwood's "Undo It" while doing all of this again to make it more fun.  
+
+
+creates preferences directory into the root. then trying to put a doc in terhe from a matching directory in your home directory. copy to new directory that you just created 
+There are 2 pref directors one in root and one in home. 
+
+Class Notes: 
+copy config file from home to root, you do the 
+specifiying a file path you need to 
+~ is directory name for home
+use other punctuation you use the / 
+file underneath the home directory, specify that 
+copy from home to root you'd use the .. to specify copying the root if you know the root is immediately above your home directory
+how to specify where the config file is... 
+specify the home directory 
+IN TERMINAL:
+cd home 
+pwd
+--> you get that your directory is separated by the / so you do /
+~config.txt
+ls
+makes a name ~config.txt
+you don't want that. 
+you know it's located in the home directory- so to specify that you 
+
+pwd shows the (root)/user/home 
+the punctuation holds all the way down to the file
+/user/home/configure.txt 
+copy a file form home. so tell it where is that file? the line has to give you a path to say that config.txt is located within the home directory
+the ~ is in the home directory so you don't have to specify it. but state that in your response. I don't need to copy config back to the home directory 
+
+man = short for manual (in the shell)
+man cp = will tell you it does and how it works in the command line 
