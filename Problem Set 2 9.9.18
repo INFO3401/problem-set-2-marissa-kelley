@@ -1,0 +1,43 @@
+Problem Set #2
+Marissa Kelley
+Due Sunday September 9th
+
+1. Briefly describe what the following set of commands would achieve. What process would happen and what would be printed to the command line?
+
+    A. cd ~ 
+The cd ~ s
+
+B. mkdir ./problem_set_1
+
+
+C. touch submission.txt
+
+
+D. cd ..
+The cd takes you to the parent of the parent directory 
+
+E. pwd
+The pwd stands for "print working directory" which displays what current directory you're working in. This is beneficial in that 
+
+2. What set of commands would you use to achieve the following: 
+Copy a document called config.txt from your home directory to the root directory. Then, create a new directory in the root called preferences. Within preferences, copy prefs.txt from a matching directory called preferences in your home directory. Finally, determine that the start and end of the config.txt document in both root and home match.
+
+cp config.txt 
+mkdir preferences
+cp prefs.txt 
+
+3. Why do you think it is important to have the following shortcuts for navigating the file structure?
+A. Root: 
+B. Home: 
+C. Parent: 
+
+4. Assume all of the directories below are valid directories (e.g., they exist and we have access to them). What would the following print out? 
+
+cd /usrs/INFO3401/../homework/./problem1
+pwd
+
+The above would print out the working directory: _______ 
+
+5. You have accidentally moved a file (~/Documents/datafile.csv) to your current directory rather than copying it. What command did you use to do that? What command should you have used to do that? What command might you use to undo it? 
+
+To accidentally have moved a file, you would have had to use the ____ command. The command you should have used to copy a file is "cp". To undo it, you are screwed basically. There's no going back lol 
