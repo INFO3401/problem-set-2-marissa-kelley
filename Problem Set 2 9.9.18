@@ -2,83 +2,55 @@ Problem Set #2
 Marissa Kelley
 Due Sunday September 9th
 
-//I bounced ideas off with Jacob Paul, Anastasia Zhukova, Amy (Kexin) Zhai, Jack Sandberg, Hannah Weber and Taylor Lawrence during Friday's class
+I worked with Jacob Paul, Anastasia Zhukova, Amy (Kexin) Zhai, Jack Sandberg, Hannah Weber and Taylor Lawrence during Friday's class
 
-1. Briefly describe what the following set of commands would achieve. What process would happen and what would be printed to the command line?
+// 1. Briefly describe what the following set of commands would achieve. What process would happen and what would be printed to the command line?
 
-    A. cd ~ 
-The cd ~ command would ______
+A. cd ~ 
+--> The cd ~ command would change your directory. The ~ stands for home, thus this command would go to your home directory. The command line wouldn't print anything. 
 
 B. mkdir ./problem_set_1
-This command says to make a new directory in the ____ which is the ./ portion. The 
+--> This command says to make a new directory in the home directory which is the ./ portion. It wuold be called "problem_set_1." The command line wouldn't print anything.  
 
 C. touch submission.txt
-
+--> This command would make a new file called "submission.txt" in the home directory. The command line wouldn't print anything. 
 
 D. cd ..
-The cd takes you to the parent of the parent directory. 
+--> The cd takes you to the parent of the parent directory. The directory of the home directory may be the "users" directory. The command line wouldn't print anything. 
 
 E. pwd
-The pwd stands for "print working directory" which displays what current directory you're working in. This is beneficial if you need to find where you are, want to move a file to a different part of the computer or copy a file to a different part. It's extremely important!!! 
+--> The pwd stands for "print working directory" which displays what current directory you're working in. This is beneficial if you need to find where you are, want to move a file to a different part of the computer or copy a file to a different part. It's extremely important!!! If we are basing this off of the previous parts of question 1, it would print "/Users" in the command line. 
 
-2. What set of commands would you use to achieve the following: 
+// 2. What set of commands would you use to achieve the following: 
 Copy a document called config.txt from your home directory to the root directory. Then, create a new directory in the root called preferences. Within preferences, copy prefs.txt from a matching directory called preferences in your home directory. Finally, determine that the start and end of the config.txt document in both root and home match.
 
-cp config.txt 
-mkdir preferences
-cp prefs.txt 
+cd/ --> change your directory to the root directory. 
+cp config.txt . --> (start at home) Copy the config.txt to the root directory or current directory 
+mkdir /preferences (in the root) --> make a directory called "preferences"
+cp ~/preferences/prefs.txt .  --> Copying prefs.txt from the root directory to the preferences directory
+head /config.txt --> Look at the the start of the config.txt in the root directory
+head ~/config.txt --> Look at the start of the config.txt in the home directory 
+tail /config.txt --> Look at the end of the config.txt in the root directory
+tail ~/config.txt --> Look at the end of the config.txt in the home directory 
 
-3. Why do you think it is important to have the following shortcuts for navigating the file structure?
-A. Root: easier to get back to the beginning 
-B. Home: 
-C. Parent: 
+// 3. Why do you think it is important to have the following shortcuts for navigating the file structure?
+A. Root: The root directory makes it easier to get back to the "beginning" of your path. It's the ultimate path so it's important to have access to it. 
+B. Home: The home directory stores a lot of commonly used files, like the "user" file, making it an important one to be able to access quickly.
+C. Parent: The parent directory shortcut allows us to access our files much easier without typing out the entire path name, a very time consuming task. It also saves a person time when making new files or moving files to have a shortcut to this directory above the current directory. 
 
-4. Assume all of the directories below are valid directories (e.g., they exist and we have access to them). What would the following print out? 
+// 4. Assume all of the directories below are valid directories (e.g., they exist and we have access to them). What would the following print out? 
+(Got lots of help from Jacob on this one) 
 
 cd /usrs/INFO3401/../homework/./problem1
 pwd
 
-The above would print out the working directory: it would go back up to the parent usrs because of the two dots and then into 
-reference /homework/problem1 
-.. back up to users
-It would eventually print out 
-usrs 
-it goes usrs to info3401 back up to usrs over homework to problem 1 
-
-5. You have accidentally moved a file (~/Documents/datafile.csv) to your current directory rather than copying it. What command did you use to do that? What command should you have used to do that? What command might you use to undo it? 
-
-To accidentally have moved a file, you would have had to use the "mv ." command to move it to your current directory. The command you should have used to copy a file is "cp .". To undo it, you could re-copy it OR move it back to the ~/Documents
-cp ./datafile.csv ~Documents/datafile.csv
-Pro-tip You could also sing Carrie Underwood's "Undo It" while doing all of this again to make it more fun.  
+--> The first part, "cd/usrs/INFO3401" would change the directory to the INFO3401 directory. This directory would be stored under the "usrs" directory- in other words, the parent directory of INFO3401 is "usrs". The "tree" path here is: root --> usrs --> INFO3401. Then, the "../homework/" section would send you back to the parent directory, "usrs" (due to the two dots, which sends you back up two directories) before sending you to a different directory within "usrs" called "homework." The tree path is: root --> usrs --> homework. The "./problem1" section would send you to a directory called "problem1" that's located within the "homework" directory. (The "tree" path would go root --> usrs--> homework --> problem1). Finally, the "pwd" would print the working directory, which is "/usrs/homework/problem1".  
 
 
-creates preferences directory into the root. then trying to put a doc in terhe from a matching directory in your home directory. copy to new directory that you just created 
-There are 2 pref directors one in root and one in home. 
+// 5. You have accidentally moved a file (~/Documents/datafile.csv) to your current directory rather than copying it. What command did you use to do that? What command should you have used to do that? What command might you use to undo it? 
+(Help from Jacob again!)
 
-Class Notes: 
-copy config file from home to root, you do the 
-specifiying a file path you need to 
-~ is directory name for home
-use other punctuation you use the / 
-file underneath the home directory, specify that 
-copy from home to root you'd use the .. to specify copying the root if you know the root is immediately above your home directory
-how to specify where the config file is... 
-specify the home directory 
-IN TERMINAL:
-cd home 
-pwd
---> you get that your directory is separated by the / so you do /
-~config.txt
-ls
-makes a name ~config.txt
-you don't want that. 
-you know it's located in the home directory- so to specify that you 
-
-pwd shows the (root)/user/home 
-the punctuation holds all the way down to the file
-/user/home/configure.txt 
-copy a file form home. so tell it where is that file? the line has to give you a path to say that config.txt is located within the home directory
-the ~ is in the home directory so you don't have to specify it. but state that in your response. I don't need to copy config back to the home directory 
-
-man = short for manual (in the shell)
-man cp = will tell you it does and how it works in the command line 
+- To accidentally have moved a file, you might have used the "mv" command to move it to your current directory. --> mv ~/Documents/datafile.csv ./datafile.csv  OR you could've used a "." to move it to the current directory:  mv ~/Documents/datafile.csv .
+- The command you should have used to copy a file is "cp".  --> cp ~/Documents/datafile.csv ./datafile.csv OR cp ~/Documents/datafile.csv . 
+- To undo it, you could re-copy it OR move it back to the ~/Documents directory. -->  cp ./datafile.csv ~/Documents/datafile.csv
+- Pro-tip!! You can also sing Carrie Underwood's "Undo It" while doing all of this to make it more fun!
